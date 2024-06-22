@@ -1,0 +1,42 @@
+{
+  "1": {
+    "ID": 1,
+    "LookText": "This is the first room",
+    "RoomIntro": "This is a room intro",
+    "GoLeft": null,
+    "GoRight": null,
+    "GoBack": null,
+    "GoForward": 2,
+    "RoomItems": null
+  },
+  "2": {
+    "ID": 2,
+    "LookText": "This is the second room",
+    "RoomIntro": null,
+    "GoLeft": null,
+    "GoRight": 4,
+    "GoBack": 1,
+    "GoForward": 3,
+    "RoomItems": null
+  },
+  "3": {
+    "ID": 3,
+    "LookText": "Third Room",
+    "RoomIntro": null,
+    "GoLeft": null,
+    "GoRight": 4,
+    "GoBack": 2,
+    "GoForward": 5,
+    "RoomItems": null
+  },
+  "4": {
+    "ID": 4,
+    "LookText": "Fourth Room",
+    "RoomIntro": null,
+    "GoLeft": null,
+    "GoRight": null,
+    "GoBack": 3,
+    "GoForward": null,
+    "RoomItems": null
+  }
+}
