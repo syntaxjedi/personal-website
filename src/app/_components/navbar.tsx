@@ -1,3 +1,4 @@
+'use client'
 import {
     AppBar,
     Box,
@@ -7,23 +8,25 @@ import {
     Typography
 } from "@mui/material"
 import { themeOptions } from "../page"
-import {UpdatePageState} from "../page"
-import {states} from "../page"
 import { Component, useState } from "react"
 import React from "react"
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
+import Link from "next/link"
 
 
 
-export default function NavBar({ stateUpdate }){
-    const pages = [["About Me", states.about], ["Projects", states.projects], ["Games", states.createCharacter], ["Contact Me", states.contact]]
+export default function NavBar(){
+    const pages = [["About Me", "About"], ["Projects", "Projects"], ["Games", "Games"], ["Contact Me", "Contact"]]
     const [firstRoll, setFirstRoll] = useState(true);
     const [lastRoll, setLastRoll] = useState(0)
     const [currentPage, setCurrentPage] = useState("Welcome");
+    
+    /*
     function handleClick(clickedPage){
         setCurrentPage(clickedPage[0]);
         stateUpdate(clickedPage[1]);
     }
+    */
     function handleSurprise(){
         var roll;
         
@@ -35,7 +38,7 @@ export default function NavBar({ stateUpdate }){
             if(roll === lastRoll){roll = Math.floor(Math.random() * 11);}
             setLastRoll(roll);
         }
-        stateUpdate(pages[1])
+        
         switch(roll){
             case 0:
                 setCurrentPage("Ouch!");
@@ -67,14 +70,16 @@ export default function NavBar({ stateUpdate }){
         }
     }
     return(<>
-        <AppBar postion="fixed" sx={{bgcolor: themeOptions.palette.primary.main}}>
+        <AppBar position="fixed" sx={{bgcolor: themeOptions.palette.primary.main}}>
             <Container maxWidth="xl">
                 <Toolbar sx={{display: "flex", justifyContent: "flex-end"}}>
                     <AccountCircleIcon sx={{mr: 3}} onClick={handleSurprise}/>
                     <Typography sx={{mr: 'auto'}}>{currentPage}</Typography>
                     <Box>
                         {pages.map((page)=>(
-                            <Button key={page[0]} onClick={() => handleClick(page)} variant="contained" sx={{bgcolor: "inherit", boxShadow: 0, '&.MuiButton-root:hover':{bgcolor: "transparent"}}}>{page[0]}</Button>
+                            <Link key={page[0]} href={"/"+page[1]}>
+                                <Button key={page[0]} variant="contained" sx={{bgcolor: "inherit", boxShadow: 0, '&.MuiButton-root:hover':{bgcolor: "transparent"}}}>{page[0]}</Button>
+                            </Link>
                         ))}
                     </Box>
                     </Toolbar>

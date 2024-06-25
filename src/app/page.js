@@ -4,11 +4,10 @@ import styles from "./page.module.css";
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Input from '@mui/material/Input';
-import CommandParse from './CommandHelper';
 import { useState } from 'react';
-import NavBar from './Components/navbar'
+import NavBar from './_components/navbar'
 import { Box, Typography } from "@mui/material";
-import QuickLook from "./Components/quickLook";
+import QuickLook from "./_components/quickLook";
 
 
 
@@ -96,63 +95,6 @@ export default function Home() {
     console.log("Clicked");
     console.log(click);
   }
-
-  switch(pageState){
-    case states.createCharacter:
-      return(
-        <div style={{background: themeOptions.palette.primary.dark, height: '100vh'}}>
-          <NavBar stateUpdate={navBarClick}/>
-          <box sx={{bgcolor: 'inherit', display: 'flex'}} >
-            <form method="post" onSubmit={SubmitForm} style={{marginTop: 60, paddingTop: 20, paddingLeft:'40vw'}}>
-              <label>Character Name: <Input name="charName" defaultValue="Some Text" /> </label>
-              <div>
-                Class:<br/>
-                <label><Input type="radio" name="class" value="Healer" defaultChecked="true"/> Healer </label><br/>
-                <label><Input type="radio" name="class" value="Tank" /> Tank </label><br/>
-                <label><Input type="radio" name="class" value="Rogue" /> Rogue </label>
-              </div>
-              <br />
-              <Button variant="contained" type="submit" sx={{bgcolor: themeOptions.palette.primary.main, color: 'black', '&.MuiButton-root:hover':{bgcolor: themeOptions.palette.secondary.dark}}}>Save</Button>
-            </form>
-          </box>
-        </div>
-      );
-    case states.game:
-      return(
-        <div style={{background: themeOptions.palette.primary.dark, height: '100vh'}}>
-          <NavBar stateUpdate={navBarClick}/>
-          <h1>Game</h1>
-          <Container sx={{bg: themeOptions.primary}}>
-          <ReactButton style={{display: "inline"}}/>
-          </Container>
-          <Container style={{background: '#2b2b2b'}}>
-          <label>Command Output: {commandOutput}</label><br/>
-          <label>Input: </label>
-          <SubmitInput name="command" defaultValue="Input Command"/>
-          </Container>
-        </div>
-      );
-    case states.generateRooms:
-      return(
-        <div style={{background: themeOptions.palette.primary.dark, height: '100vh'}}>
-        </div>
-      );
-      case states.about:
-        return(
-          <div style={{background: themeOptions.palette.primary.dark, height: '100vh'}}>
-            <NavBar stateUpdate={navBarClick}/>
-          </div>
-        );
-      case states.projects:
-        return(
-          <div style={{background: themeOptions.palette.primary.dark, height: '100vh'}}>
-            <NavBar stateUpdate={navBarClick}/>
-            <div style={{paddingTop: 60}}/>
-            <QuickLook />
-          </div>
-        );
-    default:
-      setPageState(states.about);
-      return;
-  }
+//<div style={{background: themeOptions.palette.primary.dark, height: '100vh'}}>
+  return(<><p1>Hello World</p1></>);
 }
