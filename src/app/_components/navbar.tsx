@@ -50,7 +50,7 @@ export default function NavBar(){
                 setCurrentPage("*Click Rejected*");
                 return;
             case 3:
-                setCurrentPage("I'm stealing your data!");
+                setCurrentPage("Nerds unite!");
                 return;
             case 4:
                 setCurrentPage("You're crushing my bones!");

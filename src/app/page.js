@@ -79,22 +79,6 @@ export default function Home() {
     //rooms.push(secondRoom);
   }
 
-  function EnterCommand(e){
-    setCommandOutput(e.target.value);
-  }
-
-  function UpdatePageState(state){
-    console.log(state);
-    setPageState(states(state));
-  }  
-  const navBarClick = (state) =>{
-        setPageState(state);
-  };
-
-  const test = (click) => {
-    console.log("Clicked");
-    console.log(click);
-  }
 //<div style={{background: themeOptions.palette.primary.dark, height: '100vh'}}>
   return(<><p1>Hello World</p1></>);
 }
