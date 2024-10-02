@@ -1,6 +1,7 @@
 {
   "name": "personal-website",
   "version": "0.1.0",
+  "homepage": "https://caseycomeau.tech",
   "private": true,
   "scripts": {
     "dev": "next dev",
