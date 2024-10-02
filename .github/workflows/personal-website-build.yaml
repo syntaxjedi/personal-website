@@ -38,7 +38,6 @@ jobs:
           SITE_URL: ${{ inputs.site-url }}
         run: |
           npm ci
-          npm install @mui/material @emotion/react @emotion/styled
           npm run build
 
 # Please do not touch the following action
