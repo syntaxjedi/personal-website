@@ -77,7 +77,7 @@ export default function NavBar(){
                     <Typography sx={{mr: 'auto'}}>{currentPage}</Typography>
                     <Box>
                         {pages.map((page)=>(
-                            <Link key={page[0]} href={page[1]} >
+                            <Link key={page[0]} href={page[1]} prefetch={true}>
                                 <Button key={page[0]} variant="contained" sx={{bgcolor: "inherit", boxShadow: 0, '&.MuiButton-root:hover':{bgcolor: "transparent"}}} >{page[0]}</Button>
                             </Link>
                         ))}
