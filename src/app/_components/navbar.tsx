@@ -8,7 +8,7 @@ import {
     Typography
 } from "@mui/material"
 import { themeOptions } from "../page"
-import { Component, useState } from "react"
+import { useState } from "react"
 import React from "react"
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import Link from "next/link"
@@ -16,7 +16,7 @@ import Link from "next/link"
 
 
 export default function NavBar(){
-    const pages = [["About Me", "About"], ["Projects", "Projects"], ["Games", "Games"], ["Contact Me", "Contact"]]
+    const pages = [["Home", "/"], ["About Me", "/About"], ["Projects", "/Projects"], ["Games", "/Games"], ["Contact Me", "/Contact"]]
     const [firstRoll, setFirstRoll] = useState(true);
     const [lastRoll, setLastRoll] = useState(0)
     const [currentPage, setCurrentPage] = useState("Welcome");
@@ -77,8 +77,8 @@ export default function NavBar(){
                     <Typography sx={{mr: 'auto'}}>{currentPage}</Typography>
                     <Box>
                         {pages.map((page)=>(
-                            <Link key={page[0]} href={"/"+page[1]}>
-                                <Button key={page[0]} variant="contained" sx={{bgcolor: "inherit", boxShadow: 0, '&.MuiButton-root:hover':{bgcolor: "transparent"}}}>{page[0]}</Button>
+                            <Link key={page[0]} href={page[1]} >
+                                <Button key={page[0]} variant="contained" sx={{bgcolor: "inherit", boxShadow: 0, '&.MuiButton-root:hover':{bgcolor: "transparent"}}} >{page[0]}</Button>
                             </Link>
                         ))}
                     </Box>
