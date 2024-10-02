@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Box, Typography } from "@mui/material"
 
-export const themeOptions = {
+/* export const themeOptions = {
     palette: {
       mode: 'light',
       primary: {
@@ -9,7 +9,7 @@ export const themeOptions = {
         dark: '#1D2C1D',
         light: '#546654',
       },
-      secondary: {
+      secondary: {ß
         main: '#f50057',
         dark: '#36695D',
       },
@@ -20,15 +20,14 @@ export const themeOptions = {
         main: 'rgb(53, 122, 56)',
       },
     },
-};
-  
+}; */
 
 export default function HomePage()
 {
     return(
-        <Box sx={{marginLeft: '25%', marginRight: '25%', background: themeOptions.palette.primary.dark}}>
+        <Box sx={{marginLeft: '25%', marginRight: '25%', background: '#1D2C1D'/* themeOptions.palette.primary.dark */}}>
             <h1 style={{marginLeft: '25%', marginRight: '25%'}}>Welcome!</h1>
-            <p style={{marginLeft: '25%', marginRight: '25%'}}>Thanks for stopping by. Stay for a while and take a look around, I'm sure you'll find something interesting.</p>
+            <p style={{marginLeft: '25%', marginRight: '25%'}}>Thanks for stopping by. Stay for a while and take a look around, I&apos;m sure you&apos;ll find something interesting.</p>
         </Box>
     )
 }

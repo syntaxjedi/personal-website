@@ -13,28 +13,6 @@ import QuickLook from "./_components/quickLook";
 
 
 
-export const themeOptions = {
-  palette: {
-    mode: 'light',
-    primary: {
-      main: '#2a402a',
-      dark: '#1D2C1D',
-      light: '#546654',
-    },
-    secondary: {
-      main: '#f50057',
-      dark: '#36695D',
-    },
-    info: {
-      main: '#882d71',
-    },
-    success: {
-      main: 'rgb(53, 122, 56)',
-    },
-  },
-};
-
-
 export const states = Object.freeze({
   createCharacter: "createCharacter",
   game: "game",

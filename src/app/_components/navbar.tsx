@@ -7,7 +7,7 @@ import {
     Toolbar,
     Typography
 } from "@mui/material"
-import { themeOptions } from "../page"
+//import { themeOptions } from "../page"
 import { useState } from "react"
 import React from "react"
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
@@ -70,7 +70,7 @@ export default function NavBar(){
         }
     }
     return(<>
-        <AppBar position="fixed" sx={{bgcolor: themeOptions.palette.primary.main}}>
+        <AppBar position="fixed" sx={{bgcolor: '#2a402a'/* themeOptions.palette.primary.main */}}>
             <Container maxWidth="xl">
                 <Toolbar sx={{display: "flex", justifyContent: "flex-end"}}>
                     <AccountCircleIcon sx={{mr: 3}} onClick={handleSurprise}/>
