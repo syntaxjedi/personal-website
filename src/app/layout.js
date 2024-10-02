@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import NavBar from "./src/app/_components/navbar";
+import NavBar from "./_components/navbar";
 import { red } from "@mui/material/colors";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" >
-      <body>Hello World</body>
+      <body>{children}</body>
     </html>
   );
 }
