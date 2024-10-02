@@ -16,7 +16,7 @@ import Link from "next/link"
 
 
 export default function NavBar(){
-    const pages = [["Home", "/"], ["About Me", "About"], ["Projects", "/Projects"], ["Games", "/Games"], ["Contact Me", "/Contact"]]
+    const pages = [["Home", "/"], ["About Me", "About.html"], ["Projects", "Projects.html"], ["Games", "Games.html"], ["Contact Me", "Contact.html"]]
     
     /*
     const [firstRoll, setFirstRoll] = useState(true);
