@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" >
-      
+      <NavBar />
       <body style={{marginTop: 65}}>{children}</body>
     </html>
   );
