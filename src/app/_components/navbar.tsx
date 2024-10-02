@@ -1,4 +1,4 @@
-'use client'
+//'use client'
 import {
     AppBar,
     Box,
@@ -17,16 +17,18 @@ import Link from "next/link"
 
 export default function NavBar(){
     const pages = [["Home", "/"], ["About Me", "About"], ["Projects", "/Projects"], ["Games", "/Games"], ["Contact Me", "/Contact"]]
+    
+    /*
     const [firstRoll, setFirstRoll] = useState(true);
     const [lastRoll, setLastRoll] = useState(0)
     const [currentPage, setCurrentPage] = useState("Welcome");
     
-    /*
+    
     function handleClick(clickedPage){
         setCurrentPage(clickedPage[0]);
         stateUpdate(clickedPage[1]);
     }
-    */
+    
     function handleSurprise(){
         var roll;
         
@@ -69,12 +71,13 @@ export default function NavBar(){
                 return;
         }
     }
+    */
     return(<>
         <AppBar position="fixed" sx={{bgcolor: '#2a402a'/* themeOptions.palette.primary.main */}}>
             <Container maxWidth="xl">
                 <Toolbar sx={{display: "flex", justifyContent: "flex-end"}}>
-                    <AccountCircleIcon sx={{mr: 3}} onClick={handleSurprise}/>
-                    <Typography sx={{mr: 'auto'}}>{currentPage}</Typography>
+                    <AccountCircleIcon sx={{mr: 3}}/*  onClick={handleSurprise} *//>
+                    <Typography sx={{mr: 'auto'}}>{/* {currentPage} */}</Typography>
                     <Box>
                         {pages.map((page)=>(
                             <Link key={page[0]} href={page[1]} prefetch={true}>
