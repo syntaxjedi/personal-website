@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import RootLayout from './layout'
-import Deadshot from './images/X.png'
+import Deadshot from './icon.png'
 import { Box, Typography } from "@mui/material"
 
 /* export const themeOptions = {
