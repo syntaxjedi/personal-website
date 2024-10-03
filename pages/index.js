@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import RootLayout from './layout'
+import Deadshot from './images/X.png'
 import { Box, Typography } from "@mui/material"
 
 /* export const themeOptions = {
@@ -27,7 +28,7 @@ export default function HomePage()
 {
     return(
       <RootLayout>
-        <Image src={require('./images/X.png')} width={140} height={140} alt={"X"} />
+        <Image src={Deadshot} width={140} height={140} alt={"X"} />
         <Box sx={{marginLeft: '25%', marginRight: '25%', background: '#1D2C1D'/* themeOptions.palette.primary.dark */}}>
             <h1 style={{marginLeft: '25%', marginRight: '25%'}}>Welcome!</h1>
             <p style={{marginLeft: '25%', marginRight: '25%'}}>Thanks for stopping by. Stay for a while and take a look around, I&apos;m sure you&apos;ll find something interesting.</p>
