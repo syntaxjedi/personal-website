@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <>
       <NavBar />
-      <main style={{marginTop: 65}}>{children}</main>
+      <main style={{marginTop: 65, backgroundColor: "#111a11", color: '#FFFFFF'}}>{children}</main>
     </>
   );
 }
