@@ -1,4 +1,4 @@
-import Post from "../src/app/_components/post";
+import Post from "../src/_components/post";
 import RootLayout from './layout'
 export default function Projects(){
     return(
