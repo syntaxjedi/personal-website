@@ -1,4 +1,3 @@
-//'use client'
 import {
     AppBar,
     Box,
@@ -16,7 +15,7 @@ import Link from "next/link"
 
 
 export default function NavBar(){
-    const pages = [["Home", "Index"], ["About Me", "About"], ["Projects", "Projects"], ["Games", "Games"], ["Contact Me", "Contact"]]
+    const pages = [["Home", ""], ["About Me", "about"], ["Projects", "Projects"], ["Games", "Games"], ["Contact Me", "Contact"]]
     
     /*
     const [firstRoll, setFirstRoll] = useState(true);
@@ -80,7 +79,7 @@ export default function NavBar(){
                     <Typography sx={{mr: 'auto'}}>{/* {currentPage} */}</Typography>
                     <Box>
                         {pages.map((page)=>(
-                            <Link key={page[0]} href={page[1]+".html"} prefetch={true}>
+                            <Link key={page[0]} href={"/"+page[1]} prefetch={true}>
                                 <Button key={page[0]} variant="contained" sx={{bgcolor: "inherit", boxShadow: 0, '&.MuiButton-root:hover':{bgcolor: "transparent"}}} >{page[0]}</Button>
                             </Link>
                         ))}
