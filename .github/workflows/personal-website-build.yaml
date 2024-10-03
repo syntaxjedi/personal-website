@@ -14,7 +14,7 @@ on:
         type: string
 
 env:
-  DEPLOYMENT_FOLDER: build/server/app
+  DEPLOYMENT_FOLDER: build/server
 
 jobs:
 # Please do not rename this job
